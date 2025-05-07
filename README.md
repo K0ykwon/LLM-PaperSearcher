@@ -24,5 +24,5 @@
     - (1)에서 입력받은 prompt와 논문 Title, Abstract를 이용하여 논문에 대한 설명과 prompt와의 연관성, 그리고 추천의 적합도를 생성해낸다.
     - (1)과 동일하게 BaseModel을 상속받는 클래스를 만들어 structured Outputs을 적용했고 다음과 같은 형식으로 답변이 나오도록 했다: **{description: str; Relevance: float}**
     -  또한, 여기서는 abstract가 너무 많은 토큰을 차지하고, 방대해서 Cot prompt나 Few shot prompt로 처리하기에는 무리가 있었다. 그리고 Transformer 구조를 기반으로 하는 GPT 모델의 특성상 요약 작업에 있어서 이미 좋은 성능을 보이기 때문에 요약 성능을 위한 prompting 기법은 따로 필요하지 않다고 판단했다. 따라서 Role playing prompt 기법만 적용하여 상황에 더 적절한 논문 해석을 제공하도록 했다.
-    -  
+      
 (1)~(3) 과정을 마친 뒤에는 논문 제목, 저자, 링크, 요약, 적합성 등을 정리해서 유저에게 제공한다.
