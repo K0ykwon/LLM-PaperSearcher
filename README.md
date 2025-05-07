@@ -8,7 +8,8 @@
 - LLM.py: generateST(검색어 생성), SummarizePP(논문 요약) 등의 openAl API를 사용하는 함수가 들어있는 파일. 
 - parser.py: searchPaper(논문 검색 및 스크롤) 등 웹 파싱에 관련된 파일. 
 - prompts.py: CoT, Few shot, Role playing 등 Prompting 기법들을 모아놓은 파일.      
-<br><\br>
+<br>
+
 위 서비스는 다음과 같이 크게 3단계 구조로 나눌 수 있다.
 - (1) 사용자의 prompt를 입력 받아 arxiv 검색어를 생성해내는 부분(LLM 사용) 
     - prompt를 입력받고, pydantic의 BaseModel을 상속받는 클래스를 만들어 structured Outputs을 적용했다
